@@ -27,7 +27,6 @@ export class SectionComponent implements OnDestroy {
         this.employees = data;
         this.filteredEmployees = data;
         this.employees.forEach(emp => {
-          console.log(emp.designation)
           if (emp.designation === "Senior Manager" || emp.designation === "Manager") {
             if (this.rms) {
               this.rms.push(emp.name)
@@ -36,7 +35,6 @@ export class SectionComponent implements OnDestroy {
             }
           }
         })
-        console.log(this.rms)
       },
       error: (error: Error) => {
         console.log(error);
