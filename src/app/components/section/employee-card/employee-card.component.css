@@ -1,0 +1,140 @@
+.employee-card {
+  width: 350px;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  padding: 16px 0;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s ease-in-out;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.employee-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.employee-photo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 16px 0 8px;
+}
+
+.employee-info {
+  flex-grow: 1;
+}
+
+.employee-name {
+  margin: 0 0 12px 0;
+  font-size: 1.1em;
+  color: #333;
+  font-weight: bold;
+}
+
+.employee-title {
+  margin: 0;
+  font-size: 0.9em;
+  color: #777;
+}
+
+.employee-rating {
+  padding: 16px 12px;
+  display: flex;
+  gap: 24px;
+}
+
+.fa-star {
+  color: #ccc;
+  font-size: 1.1em;
+}
+
+.checked {
+  color: #ffcc00;
+}
+
+.employee-details {
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+.employee-details p {
+  margin: 5px 0;
+  font-size: 0.9em;
+  color: #555;
+}
+
+.employee-contact {
+  display: flex;
+  justify-content: space-around;
+  padding: 16px 12px;
+}
+
+.contact-btn {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 8px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+.contact-btn i {
+  font-size: 1.1em;
+}
+
+.contact-btn.email {
+  background-color: #e0624b;
+}
+
+
+.contact-btn:hover {
+  opacity: 0.9;
+}
+
+.detail {
+  color: #9c9c9c
+}
+
+.row-section {
+  padding: 16px 12px;
+  border-top: 1px solid #f3f3f3;
+  border-bottom: 1px solid #f3f3f3;
+}
+
+.display-flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.ellipsis {
+  margin-right: 16px;
+}
+
+/* .tilted-border:after {
+		position: absolute;
+		z-index: -1;
+		content: "";
+		right: -10%;
+		top: 0;
+		height: 100%;
+		width: 100%;
+		background-color: inherit;
+		-webkit-transform: skewX(-10deg);
+		-moz-transform: skewX(-10deg);
+		-ms-transform: skewX(-10deg);
+		transform: skewX(-10deg);
+	} */
+
+  .menu{
+    display: flex;
+    gap: 8px;
+    margin-right: 12px;
+  }
+

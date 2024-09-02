@@ -1,0 +1,22 @@
+<div class="section-container">
+  <div *ngIf="!selectedEmployee" class="display-flex">
+    <button class="add-button" (click)="onAdd()">Add New Employee</button>
+    <span>{{filteredEmployees.length}} Results Found</span>
+    <div>
+      <input type="checkbox" id="show-bangalore" [(ngModel)]="showBangalore" (change)="toggleBangaloreEmployee()">
+        <label for="show-bangalore">Show only Bangalore Employees</label>
+    </div>
+  </div>
+  
+  <div *ngIf="selectedEmployee">
+    <app-employee-form [employee]="selectedEmployee" [resourceManagers]="rms" (formSubmit)="onFormSubmit($event)" (formCancel)="onCancel()"></app-employee-form>
+  </div>
+  
+  <div *ngIf="!selectedEmployee">
+    <ul>
+      <li *ngFor="let employee of filteredEmployees">
+        <app-employee-card [employee]="employee" (editClicked)="selectedEmployee = employee" (trashClicked)="onDelete(employee.id)"></app-employee-card>
+      </li>
+    </ul>
+  </div>
+</div>

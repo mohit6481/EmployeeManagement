@@ -1,0 +1,64 @@
+<div class="display-flex">
+  <div class="sidebar">
+    <div>
+      <div class="brand-logo">
+       <a routerLink="/">
+        <img [src]="logoUrl" alt="Brand Logo">
+       </a>
+      </div>
+      <ul class="nav-list">
+       <li class="nav-item">
+        <a routerLink="/" (click)="onClick($event)" data-id="" [class.active] = "currentLink === ''">
+          <i class="fas fa-tachometer-alt overview-icon"></i>
+          Overview
+        </a>
+       </li>
+       <li class="nav-item">
+        <a routerLink="/messages" (click)="onClick($event)" data-id="message" [class.active] = "currentLink === 'message'">
+          <i class="fas fa-envelope messages-icon"></i>
+          Messages <span class="badge">{{unreadMessagesCount < 100 ? unreadMessagesCount : '99+'}}</span>
+        </a>
+       </li>
+       <li class="nav-item">
+        <a routerLink="/" (click)="onClick($event)" data-id="search" [class.active] = "currentLink === 'search'">
+          <i class="fas fa-search search-icon"></i>
+          Search
+        </a>
+       </li>
+       <li class="nav-item">
+        <a routerLink="/" (click)="onClick($event)" data-id="filter" [class.active] = "currentLink === 'filter'">
+          <i class="fas fa-filter filter-icon"></i>
+          Filter
+        </a>
+       </li>
+       <li class="nav-item">
+        <a routerLink="/history" (click)="onClick($event)" data-id="history" [class.active] = "currentLink === 'history'">
+          <i class="fas fa-history history-icon"></i>
+          History
+        </a>
+       </li>
+       <li class="nav-item">
+        <a routerLink="/myaccount" (click)="onClick($event)" data-id="myaccount" [class.active] = "currentLink === 'myaccount'">
+          <i class="fas fa-user account-icon"></i>
+          My Account
+        </a>
+       </li>
+      </ul>
+    </div>
+   <div class="help-signout">
+    <ul class="nav-list">
+      <li class="nav-item">
+        <a routerLink="/help" (click)="onClick($event)" data-id="help" [class.active] = "currentLink === 'help'">
+          <i class="fas fa-question-circle help-icon"></i> Get Help
+        </a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="/signout" (click)="onClick($event)" data-id="signout" [class.active] = "currentLink === 'signout'">
+          <i class="fas fa-sign-out-alt signout-icon"></i> Sign Out
+        </a>
+      </li>
+      </ul>
+   </div>
+  </div>
+  <app-search-filter *ngIf="currentLink === 'search' || currentLink === 'filter'" (onFilterSubmit)="filterSibmit()"></app-search-filter>
+</div>

@@ -1,0 +1,68 @@
+<div class="container">
+    <form [formGroup]="filterForm" (ngSubmit)="onSubmit()">
+        <div class="filter-section">
+            <div class="filter-top">
+                <div class="filter">
+                    <label>Department</label>
+                    <select formControlName="department">
+                        <option value="">-- Select Department --</option>
+                        <option *ngFor="let department of departments" [value]="department">{{department}}</option>
+                    </select>
+                </div>
+        
+                <div class="filter">
+                    <label>Role Type</label>
+                    <select formControlName="roleType">
+                        <option value="">-- Select Role --</option>
+                        <option *ngFor="let roleType of roleTypes" [value]="roleType">{{roleType}}</option>
+                    </select>
+                </div>
+        
+                <div class="filter">
+                    <label>Designation</label>
+                    <select formControlName="designation">
+                        <option value="">-- Select Designation --</option>
+                        <option *ngFor="let designation of designations" [value]="designation">{{designation}}</option>
+                    </select>
+                </div>
+        
+                <div class="filter">
+                    <label>Experience</label>
+                    <select formControlName="experience">
+                        <option value="">-- Select Experience --</option>
+                        <option *ngFor="let experience of experiences" [value]="experience">{{experience}}</option>
+                    </select>
+                </div>
+        
+                <div class="filter">
+                    <label>Year of Joining</label>
+                    <select formControlName="doj">
+                        <option value="">-- Select DOJ --</option>
+                        <option *ngFor="let year of doj" [value]="year">{{year}}</option>
+                    </select>
+                </div>
+        
+                <div class="filter">
+                    <label>Location</label>
+                    <select formControlName="location">
+                        <option value="">-- Select Location --</option>
+                        <option *ngFor="let location of locations" [value]="location">{{location}}</option>
+                    </select>
+                </div>
+        
+                <div class="filter">
+                    <label>Team</label>
+                    <select formControlName="currentTeam">
+                        <option value="">-- Select Team --</option>
+                        <option *ngFor="let team of currentTeam" [value]="team">{{team}}</option>
+                    </select>
+                </div>
+            </div>
+    
+            <div class="filter-buttons">
+                <button type="button" class="clear" (click)="onClear()">Clear</button>
+                <button type="submit" class="submit">Submit</button>
+            </div>
+        </div>
+    </form>
+</div>

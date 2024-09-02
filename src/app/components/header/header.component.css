@@ -1,0 +1,60 @@
+.badge {
+    position: absolute;
+    font-size: x-small;
+    margin-left: -5px;
+    margin-top: -10px;
+    background-color: #e0624b;
+    color: white;
+    border-radius: 50%;
+    height: 16px;
+    width: 16px;
+    text-align: center;
+    align-content: center;
+  }
+
+  .icon-badge {
+    position: relative;
+    font-size: 24px;
+    color: gray;
+  }
+
+  .header {
+    display: flex;
+    justify-content: right;
+    padding: 12px 16px;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .notification {
+    margin-right: 32px;
+    position: relative;
+  }
+
+  .notification-dropdown{
+    position: absolute;
+    top: 12px;
+    left: 0;
+  }
+
+  .notification-dropdown ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .notification-dropdown li {
+    padding: 16px 12px;
+    border: 1px solid #e0e0e0;
+    background-color: #fff;
+    width: max-content;
+  }
+
+  .notification-dropdown li:hover {
+    background-color: #e0e0e0;
+  }
+
+  select {
+    padding: 4px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }

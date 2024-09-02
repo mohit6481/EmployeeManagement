@@ -1,0 +1,36 @@
+.section-container {
+  height: 100%;
+  background-color: #f8fcfb;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1) inset;
+  overflow-y: auto;
+}
+
+.employee-cards {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 0 16px;
+}
+
+.display-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 16px 8px;
+}
+
+.add-button {
+    padding: 8px;
+    border-radius: 4px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    background-color: #6fb996;
+    margin-right: 24px;
+}

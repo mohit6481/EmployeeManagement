@@ -1,0 +1,57 @@
+.container {
+  height: 100%;
+}
+
+.filter-section {
+  background-color: #ffffff;
+  width: 240px;
+  padding: 64px 0 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+.filter-section .filter-top {
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1) inset;
+}
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+select {
+  width: 100%;
+  padding: 5px 5px 5px 0;
+  border: none;
+  border-radius: 4px;
+}
+select:focus-visible {
+  border: none;
+  outline: none;
+}
+.filter-buttons {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 16px;
+}
+.clear, .submit {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.clear {
+  background-color: #fff;
+  color: #28a745;
+  border: 1px solid #28a745;
+}
+.submit {
+  background-color: #28a745;
+  color: #fff;
+}
+.filter{
+    padding: 16px;
+    border-bottom: 2px solid #e0e0e0;
+}
+form {
+    height: 100%;
+}

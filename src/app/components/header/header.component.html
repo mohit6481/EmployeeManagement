@@ -1,0 +1,24 @@
+<div class="header">
+  <div class="notification">
+    <div (click)="notificationClick()">
+      <i class="fa-regular fa-bell icon-badge"></i>
+      <span class='badge'>2</span>
+    </div>
+    <div class="notification-dropdown" *ngIf="showNotification" (click)="notificationClick()">
+      <ul>
+        <li>
+          Notification 1
+        </li>
+        <li>
+          Notification 2
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="team-selector">
+    <select name="team-names" id="team-names" [(ngModel)]="selectedTeam" (change)="onTeamSelection()">
+      <option value="">-- Select Team --</option>
+      <option *ngFor="let team of teams" [value]="team">{{team}}</option>
+    </select>
+  </div>
+</div>

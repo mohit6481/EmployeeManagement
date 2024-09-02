@@ -1,0 +1,7 @@
+<div class="container">
+    <h2>Your Messages:</h2>
+    <div *ngFor="let message of messagesData" class="message-container" (click)="messageClick(message)">
+        <span [class.unread] = "message.readStatus === 'unread'">{{message.message}}</span>
+        <span>{{message.readStatus | uppercase}}</span>
+    </div>
+</div>
