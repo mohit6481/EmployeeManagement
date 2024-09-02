@@ -22,6 +22,16 @@ export class SectionComponent implements OnDestroy {
 
 
   constructor(private employeeService: EmployeeService) {
+    this.employeeService.updateFilter({
+      department: '',
+      roleType: '',
+      designation: '',
+      experience: '',
+      doj: '',
+      location: '',
+      currentTeam: ''
+    })
+    this.employeeService.updateTeam('')
     this.empSer = this.employeeService.getEmployees().subscribe({
       next: (data: Employee[]) => {
         this.employees = data;
